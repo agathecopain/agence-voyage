@@ -1,4 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 20px;
+    padding: 20px;
+}
 header{
     width: 100%;
     background-color: #9747FF;
+}
+
+p {
+    font-size: 18px;
 }
