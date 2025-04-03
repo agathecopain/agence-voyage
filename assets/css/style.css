@@ -1,15 +1,137 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 20px;
-    padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
 }
-header{
-    width: 100%;
-    background-color: #9747FF;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "search search search"
+    "main main main"
+    "footer footer footer";
+}
+/* Début header */
+header {
+  grid-area: header;
+  width: 100%;
+  background-color: #9747ff;
+  color: #ffffff;
+  padding: 1em 4em;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-p {
-    font-size: 18px;
+header div p {
+  font-size: 2rem;
+  padding: 0;
+  font-weight: bold;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* Allignement de la nav */
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+
+/* dimension des logos */
+.logo img {
+  width: 129px;
+  height: 100px;
+}Dîner au restaurant The Rock à Zanzibar
+  width: 50px;
+  height: 50px;
+}
+
+/* Menu déroulant */
+ul {
+  display: none;
+}
+
+/* nav:hover ul {
+  display: block;
+  list-style: none;
+} */
+/* Fin menu déroulant */
+
+/* Fin header */
+/* Début search */
+.search {
+  grid-area: search;
+}
+/* fin search */
+
+/* Début main */
+main {
+  grid-area: main;
+}
+/* fin main */
+
+/* Début footer */
+/* Mise en page*/
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1em 4em;
+  background-color: #9747ff;
+  color: rgb(245, 245, 245);
+  font-size: 16px;
+  font-weight: 450;
+}
+/* Row social media */
+.social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1em 0 1em;
+  align-items: center;
+}
+
+/* Allignement des icones social media */
+.social-media {
+  display: flex;
+  gap: 5px;
+}
+
+/* Newsletter */
+.newsletter {
+  align-self: flex-end;
+}
+
+/* Menu horizontal */
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 1em 10em;
+  border-top: #f4f4f4 0.5px solid;
+}
+.about a {
+  text-decoration: none;
+  color: rgb(245, 245, 245);
+}
+
+/* Crédits pied de page */
+.credits {
+  align-self: center;
+  padding: 0;
+  margin: 0;
 }
