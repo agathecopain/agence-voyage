@@ -15,14 +15,16 @@ body {
     "main main main"
     "footer footer footer";
 }
+/* Index */
 /* Début header */
+/* Positionnement du header, séparation du logo et du menu */
 header {
   grid-area: header;
   width: 100%;
   background-color: #9747ff;
   color: #ffffff;
-  padding: 1em 4em;
-  margin-bottom: 1em;
+  padding: 0 5%;
+  margin-bottom: auto;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -30,34 +32,20 @@ header {
   box-sizing: border-box;
 }
 
-header div p {
-  font-size: 2rem;
-  padding: 0;
-  font-weight: bold;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 /* Allignement de la nav */
-.logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1em;
-}
-
 .menu {
   display: flex;
   flex-direction: row;
 }
 
 /* dimension des logos */
-.logo img {
-  width: 129px;
-  height: 100px;
-}Dîner au restaurant The Rock à Zanzibar
-  width: 50px;
-  height: 50px;
+header img {
+  width: 120px;
+  height: 120px;
+}
+.menu img {
+  width: 40px;
+  height: 40px;
 }
 
 /* Menu déroulant */
@@ -65,16 +53,64 @@ ul {
   display: none;
 }
 
-/* nav:hover ul {
+nav:hover ul {
   display: block;
   list-style: none;
-} */
+}
 /* Fin menu déroulant */
-
 /* Fin header */
+
 /* Début search */
 .search {
   grid-area: search;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+h1 {
+  font-size: 2.125rem;
+  margin: 0;
+  padding: 1.5rem;
+}
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1em 5%;
+  width: 100%;
+  background-color: #9747ff;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.field-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+  margin: 0 10px 0 10%;
+  padding: 1em;
+  border-radius: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Espacement label et input */
+.field-container label input {
+  margin-left: 3px;
+  border: #424b78 1px solid;
+  border-radius: 32px;
+  padding: 5px;
+}
+/* Bouton search */
+.search-form button {
+  margin: 0 10% 0 0;
+  border-radius: 50%;
+  padding: 1rem;
+  border: none;
+  background-color: #424b78;
 }
 /* fin search */
 
@@ -82,15 +118,59 @@ ul {
 main {
   grid-area: main;
 }
+.destination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25em;
+  padding: 1em 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+h2 {
+  padding: 0;
+  margin: 0 0 0.5em 0;
+}
+.destination-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1em;
+  border-top: #424b78 1.5px solid;
+  width: 100%;
+  margin: 0;
+  padding: 1em;
+  box-sizing: border-box;
+}
+.destination-container figure {
+  margin: 0;
+  flex: 1;
+}
+/* Taille des images */
+.destination-container figure img {
+  max-width: 100%;
+  border-radius: 84px;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.destination-container figure a {
+  text-decoration: none;
+  color: #424b78;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
 /* fin main */
 
 /* Début footer */
 /* Mise en page*/
 footer {
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 1em 4em;
+  padding: 1em 5%;
   background-color: #9747ff;
   color: rgb(245, 245, 245);
   font-size: 16px;
@@ -101,7 +181,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0 1em 0 1em;
+  padding: 5px 1em;
   align-items: center;
 }
 
@@ -134,4 +214,38 @@ footer {
   align-self: center;
   padding: 0;
   margin: 0;
+}
+.credits p {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+/* Page destinations */
+
+/* Début main */
+.trip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.25em;
+  padding: 1em 5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.trip-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1em;
+  padding: 1em 5%;
+}
+
+.trip-container figure img {
+  max-width: 100%;
+  border-radius: 84px;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
 }
