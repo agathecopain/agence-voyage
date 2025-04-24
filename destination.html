@@ -7,137 +7,87 @@
       Agence de voyages Twilight Travels, découvrir le monde autrement
     </title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="shortcut icon" href="assets/img/favicone.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicone.png"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <!-- Définition de la grille -->
     <div class="grid-container">
       <!-- Début header -->
       <header>
-        <!-- Logo et nom de la marque -->
-        <!-- <div class="logo"> -->
-        <img
-          src="./assets/img/logoTT-blancjaune.png"
-          alt="logo Twilight travels"
-        />
-        <!-- </div> -->
-        <!-- Connexion et menu -->
-        <div class="menu">
-          <!-- connexion -->
-          <img src="./assets/img/icone-compte.png" alt="compte" />
-          <!-- Navbar -->
-          <nav>
-            <img src="./assets/img/menuburger.png" alt="menu" />
-            <ul>
-              <li><a href="./index.html">Accueil</a></li>
-              <li><a href="./destination.html">Destinations</a></li>
-              <li><a href="./about.html">À propos</a></li>
-              <li><a href="./blog.html">Blog</a></li>
-            </ul>
-          </nav>
-          <!-- fin navbar -->
-        </div>
-        <!-- fin connexion et menu -->
-      </header>
-      <!-- Barre de recherche -->
-      <section class="search">
-        <h1>Rechercher une destination, un vol, un séjour ou un circuit</h1>
-        <form class="search-form" action="./search">
-          <div class="field-container">
-            <label>Destination <input type="text" name="destination" /></label>
-            <label
-              >Voyageurs <input type="number" name="voyageurs" step="1"
-            /></label>
-            <label>Départ <input type="date" name="date_depart" /></label>
-            <label>Arrivée <input type="date" name="date_arrivee" /></label>
+        <section class="header-container">
+          <!-- Logo et nom de la marque -->
+          <div class="logo">
+            <img
+              src="./assets/img/logoTT-blancjaune.png"
+              alt="logo Twilight travels"
+            />
           </div>
-          <button type="submit">
-            <svg
-              fill="none"
-              height="25"
-              viewBox="0 0 24 24"
-              width="25"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M9.92044 0.556335C4.55932 0.556335 0.182007 4.77726 0.182007 10.022C0.182007 15.2668 4.55932 19.4877 9.92044 19.4877C12.2173 19.4877 14.3335 18.713 16.0023 17.4149L22.3643 23.587C22.6022 23.8178 22.982 23.812 23.2128 23.5742C23.4435 23.3363 23.4377 22.9565 23.1999 22.7257L16.9048 16.6185C18.6077 14.9163 19.6589 12.5921 19.6589 10.022C19.6589 4.77726 15.2816 0.556335 9.92044 0.556335ZM1.38201 10.022C1.38201 5.47401 5.18753 1.75634 9.92044 1.75634C14.6534 1.75634 18.4589 5.47401 18.4589 10.022C18.4589 14.57 14.6534 18.2877 9.92044 18.2877C5.18753 18.2877 1.38201 14.57 1.38201 10.022Z"
-                fill="#F5F5F5"
-                fill-rule="evenodd"
-              ></path>
-            </svg>
+          <h1>Rechercher une destination, un vol, un séjour ou un circuit</h1>
+          <!-- Connexion et menu -->
+          <button class="btnMenu">
+            <!-- connexion -->
+            <img src="./assets/img/icone-compte.png" alt="compte" />
+            <!-- Navbar -->
+            <nav id="menu">
+              <img src="./assets/img/menuburger.png" alt="menu" />
+              <ul id="listeMenu">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./destination.html">Destinations</a></li>
+                <li><a href="./about.html">À propos</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+              </ul>
+            </nav>
           </button>
-        </form>
-      </section>
+          <!-- fin navbar -->
+        </section>
+        <!-- fin connexion et menu -->
+        <!-- Barre de recherche -->
+        <div class="search">
+          <form class="search-form" action="./search">
+            <div class="field-container">
+              <label
+                >Destination <input type="text" name="destination"
+              /></label>
+              <label
+                >Voyageurs <input type="number" name="voyageurs" step="1"
+              /></label>
+              <label>Départ <input type="date" name="date_depart" /></label>
+              <label>Arrivée <input type="date" name="date_arrivee" /></label>
+            </div>
+            <button type="submit">
+              <svg
+                fill="none"
+                height="25"
+                viewBox="0 0 24 24"
+                width="25"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clip-rule="evenodd"
+                  d="M9.92044 0.556335C4.55932 0.556335 0.182007 4.77726 0.182007 10.022C0.182007 15.2668 4.55932 19.4877 9.92044 19.4877C12.2173 19.4877 14.3335 18.713 16.0023 17.4149L22.3643 23.587C22.6022 23.8178 22.982 23.812 23.2128 23.5742C23.4435 23.3363 23.4377 22.9565 23.1999 22.7257L16.9048 16.6185C18.6077 14.9163 19.6589 12.5921 19.6589 10.022C19.6589 4.77726 15.2816 0.556335 9.92044 0.556335ZM1.38201 10.022C1.38201 5.47401 5.18753 1.75634 9.92044 1.75634C14.6534 1.75634 18.4589 5.47401 18.4589 10.022C18.4589 14.57 14.6534 18.2877 9.92044 18.2877C5.18753 18.2877 1.38201 14.57 1.38201 10.022Z"
+                  fill="#F5F5F5"
+                  fill-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </header>
       <!-- fin barre de recherche -->
       <main>
         <!-- Les destinations -->
         <section class="trip">
           <h2>REVUE VOYAGES</h2>
-          <div class="trip-container">
-            <figure>
-              <!-- L'url précise du produit sera spécifiée plus tard -->
-              <a href="./product.html">
-                <img
-                  src="./assets/img/plage-paradisiaque.png"
-                  alt="homme en balade sur plage de sable blanc déserte"
-                />
-                <figcaption>
-                  Les meilleurs destinations pour voyager solo en 2025
-                </figcaption>
-              </a>
-            </figure>
-            <!-- L'url précise du produit sera spécifiée plus tard -->
-            <figure>
-            <a href="./product.html">
-              <img
-                src="./assets/img/arbre-fleuri.png"
-                alt="arbre en fleur et statut d'un homme à cheval"
-              />
-              <figcaption>
-                Partir en mars pendant 1 semaine : idées et bons plans
-              </figcaption>
-            </a>
-          </figure>
-            <figure>
-              <a href="./product.html">
-                <img
-                  src="./assets/img/monaco-europe.png"
-                  alt="ville de monaco"
-                />
-                <figcaption>
-                  Top 20 des meilleures destinations européennes en 2025
-                </figcaption>
-              </a>
-            </figure>
-            <figure>
-              <a href="./product.html">
-                <img src="./assets/img/image-igloo.png" alt="hôtel d'igloo" />
-                <figcaption>Destinations insolites</figcaption>
-              </a>
-            </figure>
-            <figure>
-              <a href="./product.html">
-                <img src="./assets/img/porto.png" alt="ville de porto" />
-                <figcaption>
-                  Un petit verre de Porto ? Une escapade à moins de 150€
-                </figcaption>
-              </a>
-            </figure>
-            <figure>
-              <a href="./product.html">
-                <img
-                  src="./assets/img/ombre-avion-plage.png"
-                  alt="ombre d'un avion sur une plage"
-                />
-                <figcaption>
-                  Les vols de dernière minute à partir de 150€
-                </figcaption>
-              </a>
-            </figure>
-          </div>
+          <div class="trip-container" id="trip-container"></div>
         </section>
-        <footer>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <section class="footer-container">
           <!-- Réseaux sociaux -->
           <div class="social-container">
             <div class="social-media">
@@ -206,6 +156,7 @@
                     type="email"
                     name="email"
                     id="email"
+                    placeholder="email"
                   />
                 </label>
                 <input type="submit" value="Envoyer" />
@@ -215,7 +166,8 @@
           <!-- Informations complémentaires -->
           <div class="about">
             <a href="./about.html">À propos</a>
-            <a href="./contact.html">Contact</a> <a href="./blog.html">Blog</a>
+            <a href="./contact.html">Contact</a>
+            <a href="./blog.html">Blog</a>
             <a href="./mentionslegales.html">Mentions légales</a>
             <a href="./cgv.html">CGV</a>
           </div>
@@ -223,9 +175,11 @@
           <div class="credits">
             <p>&copy; 2025 Twilight Travels</p>
           </div>
-        </footer>
-      </main>
+        </section>
+      </footer>
       <!-- Footer -->
     </div>
+    <script src="./assets/js/destinations.js"></script>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
